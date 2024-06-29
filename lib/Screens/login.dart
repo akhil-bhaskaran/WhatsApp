@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class Login extends StatelessWidget {
   const Login({super.key});
@@ -7,21 +6,23 @@ class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        children: [
-          Container(
-            decoration: BoxDecoration(
-                backgroundBlendMode: BlendMode.multiply,
-                image: DecorationImage(
-                    image: AssetImage(
-                      'assets/images/bg.jpeg',
-                    ),
-                    fit: BoxFit.fill)),
-            width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height,
-          ),
-        ],
-      ),
-    );
+        backgroundColor: Theme.of(context).colorScheme.primary,
+        body: Column(
+          children: [
+            Center(
+              child: Container(
+                height: 300,
+                width: 300,
+                // child: Image.asset(""),
+                color: Colors.black,
+              ),
+            ),
+            Text(
+              "Welcome to WhatsApp",
+              style: TextStyle(
+                  color: Theme.of(context).colorScheme.onPrimary, fontSize: 18),
+            )
+          ],
+        ));
   }
 }

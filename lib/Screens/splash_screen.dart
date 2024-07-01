@@ -1,3 +1,4 @@
+import 'package:chatmate/Screens/home_page.dart';
 import 'package:chatmate/Screens/login.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -18,7 +19,7 @@ class _SplashScreenState extends State<SplashScreen> {
       () => Navigator.pushReplacement(
           context,
           MaterialPageRoute(
-            builder: (context) => const Login(),
+            builder: (context) => const HomePage(),
           )),
     );
     super.initState();
